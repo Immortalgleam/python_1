@@ -1,4 +1,3 @@
-#                    Exercises
 # 1. Index of the Maximum Element:
 # Create a list of numbers and find the index of the maximum element in the list.
 
