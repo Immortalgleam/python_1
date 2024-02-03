@@ -1,18 +1,17 @@
-#                    Exercises
 # 1. Index of the Maximum Element:
 # Create a list of numbers and find the index of the maximum element in the list.
 
 new_list = [1, 2, 30, 40, 50, 100]
-max_index = max(new_list)
+max_index = new_list.index(max(new_list)) # max index
 print(max_index)
 
 # 2. String Concatenation:
 # Ask the user for their first name and last name, then concatenate them into a single string.
 
-first_name = 'Tolik'
-last_name = 'Kryveckiy'
+first_name = 'John'
+last_name = 'Dou'
 print(first_name, last_name)
-full_name = first_name + ' ' + last_name
+full_name = f"{first_name} {last_name}"  # f-string
 print(full_name)
 
 # 3. String Reversal:
@@ -23,23 +22,23 @@ print(full_name[::-1])
 # 4. Checking Element Presence:
 # Create a list and ask the user to input a number, then check if this number is present in the list.
 
-l = [1, 2, 3]
-print(l[1])
-if l[1] == 2:
-    print('number is present')
+list_numbers = [1, 2, 3]
+user_number = int(input("Please enter the number: ")) # input() function
+if user_number in list_numbers:
+    print(f'number {user_number} is present')
 else:
-    print('number is not present')
+    print(f'number {user_number} is not present')
 
 
 # 5. String Comparison:
 # Input two strings from the user and check if they are equal.
 
-print(first_name is last_name)
+print(first_name == last_name) # equality of 2 objects
 
 # 6. Sum of Tuple Elements:
 # Create a tuple of numbers and print their sum.
 
-new_tuple = 1, 3, 4, 5  # or we can use round brackets ()
+new_tuple = (1, 3, 4, 5)
 print(new_tuple)
 print(sum(new_tuple))
 
@@ -64,19 +63,19 @@ print(list_1[::2])
 empty_list = []
 
 # add first element
-empty_list = [1]
+empty_list.append(0)
 print(empty_list)
 
 # add second  element
-empty_list.append(2)
+empty_list.append(1)
 print(empty_list)
 
 # add third element
-empty_list.append(3)
+empty_list.append(2)
 print(empty_list)
 
 # remove second element from a list
-del empty_list[1]
+empty_list.remove(1) # method for this operation
 
 # create a variable which will store first element from a list and remove it from  alist at the same time(one operation)
 my_list = [1, 2, 3, 4, 5]
@@ -92,11 +91,9 @@ print(my_list)
 
 
 # 10. Create a string of length 10 with empty spaces in it. change empty spaces with '+' sign
-
 str_new = ' ' * 10
-str_new = '+' * 10
+str_new = str_new.replace('', '+') # string method to replace empty spaces with '+'
 print(str_new)
-
 # 11. Simple Arithmetic Operations:
 # Input two numbers from the user and perform simple arithmetic operations (addition, subtraction, multiplication, division).
 
